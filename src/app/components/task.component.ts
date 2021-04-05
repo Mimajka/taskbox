@@ -34,17 +34,17 @@ export class TaskComponent {
 
   // tslint:disable-next-line: no-output-on-prefix
   @Output()
-  onPinTask = new EventEmitter<Event>();
+  onPinTask = new EventEmitter<string>();
 
   // tslint:disable-next-line: no-output-on-prefix
   @Output()
-  onArchiveTask = new EventEmitter<Event>();
+  onArchiveTask = new EventEmitter<string>();
   /**
    * Component method to trigger the onPin event
    * @param id string
    */
 
-  onPin(id: any): void {
+  onPin(id: string): void {
     this.onPinTask.emit(id);
   }
 
@@ -52,7 +52,7 @@ export class TaskComponent {
    * Component method to trigger the onArchive event
    * @param id string
    */
-  onArchive(id: any): void {
+  onArchive(id: string): void {
     this.onArchiveTask.emit(id);
   }
 }

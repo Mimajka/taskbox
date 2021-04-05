@@ -9,7 +9,7 @@ import { PureTaskListComponent } from './pure-task-list.component';
 
 @NgModule({
   imports: [CommonModule, NgxsModule.forFeature([TasksState])],
-  exports: [TaskComponent, TaskListComponent],
+  exports: [TaskComponent, TaskListComponent, PureTaskListComponent],
   declarations: [TaskComponent, TaskListComponent, PureTaskListComponent],
   providers: [],
 })

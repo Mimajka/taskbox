@@ -55,6 +55,12 @@ export class TasksState {
     return Object.keys(entities).map(id => entities[+id]);
   }
 
+  @Selector()
+  static getError(state: TaskStateModel): boolean {
+    const { error } = state;
+    return error;
+  }
+
   // Triggers the PinTask action, similar to redux
   @Action(PinTask)
   pinTask({ patchState, getState }: StateContext<TaskStateModel>, { payload }: PinTask): void {
